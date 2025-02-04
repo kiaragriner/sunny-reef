@@ -1,7 +1,7 @@
 ##########################################################################
-## Driver: (Name) (GitHub Handle)                                       ##
+## Driver: (Kiara Griner) (kiaragriner)                                       ##
 ## Navigator: (Name) (GitHub Handle)                                    ##
-## Date: (YYYY-MM-DD)                                                   ##
+## Date: (2024-01-16)                                                   ##
 ##########################################################################
 
 library(marinecs100b)
@@ -9,25 +9,26 @@ library(marinecs100b)
 # Guiding questions -------------------------------------------------------
 
 # What does KEFJ stand for?
-
+#one of the four rejoins of the major gulf of alaska:Kenai fjords
 # How was temperature monitored?
-
+# loggers were installed at KATM and KEFJ and recorded temperatures every 20, 30 and 60 minutes
 # What's the difference between absolute temperature and temperature anomaly?
-
+#absolute temperature is more variable while anomalies are subtracting the mean from the seasonal mean
 
 # Begin exploring ---------------------------------------------------------
 
 # How many kefj_* vectors are there?
-
+#  6
 # How long are they?
-
+# 2187966
 # What do they represent?
-
+#temberature readings, character vector, date and time of temp record, predicted tide level, typr of temp reading
 # Link to sketch
 
-???_datetime <- kefj_datetime[kefj_site == ???]
-???_interval <- ???_datetime[-1] - ???_datetime[-???]
-t???e(???)
+Aialik_datetime <- kefj_datetime[kefj_site == "Aialik" ]
+
+Aialik_interval <- Aialik_datetime[2:(length(Aialik_datetime))] - Aialik_datetime[1:(length(Aialik_datetime)-1)]
+table(Aialik_interval)
 
 
 # Problem decomposition ---------------------------------------------------

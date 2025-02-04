@@ -12,3 +12,6 @@ max(x)
 # Use non-contiguous indexing to pull out the 5th, 10th, and 15th letters.
 
 # Convert the last ten letters of the alphabet to lower case.
+LETTERS[1:10]
+LETTERS[c(5,10,15)]
+letters[16:26]
