@@ -39,18 +39,18 @@ table(Aialik_interval)
 
 # Plot the hottest day
 
-hottest_idx <- ???(kefj_temperature)
-hottest_time <- ???[hottest_idx]
-??? <- kefj_site[???]
-hotday_start <- as.POSIXct("???", tz = "Etc/GMT+8")
-hotday_end <- as.POSIXct("???", tz = "Etc/GMT+8")
-hotday_idx <- ??? == hottest_site &
-  ??? >= hotday_start &
-  ??? <= hotday_end
-hotday_datetime <- ???[hotday_idx]
-hotday_temperature <- ???
-hotday_exposure <- ???
-plot_kefj(???, ???, ???)
+hottest_idx <- hottest_idx(kefj_temperature)
+hottest_time <- kefj_time [hottest_idx]
+hottest_day <- kefj_site[hottest_idx]
+hotday_start <- as.POSIXct("2023-01-01 00:00:00", tz = "Etc/GMT+8")
+hotday_end <- as.POSIXct("2023-01-01 23:59:59", tz = "Etc/GMT+8")
+hotday_idx <- kefj_site == hottest_site &
+  kefj_time >= hotday_start &
+  kefj_time <= hotday_end
+hotday_datetime <- kefj_time[hotday_idx]
+hotday_temperature <- kefj_temperature [hotday_idx]
+hotday_exposure <- kefj_exposure [hotday_idx]
+plot_kefj(hotday_datetime, hotday_exposure, hotday_temperature)
 
 # Repeat for the coldest day
 
